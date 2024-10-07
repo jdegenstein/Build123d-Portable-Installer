@@ -429,6 +429,7 @@ AddSize 2256000
         Pop $0
         ${If} $0 == "OK"
             ClearErrors
+            CreateDirectory "$VsCodeINSTDIR"
             nsisunz::UnzipToStack "$INSTDIR\Downloads\VsCode.zip" "$VsCodeINSTDIR"
             Pop $0
             ${If} ${Errors}
