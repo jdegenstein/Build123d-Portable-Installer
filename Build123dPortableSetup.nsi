@@ -389,7 +389,8 @@ AddSize 2256000
                 ${if} $Cadquery_Checkbox == 1
                     FileWrite $R1 'cmd.exe /k "pip install cadquery cadquery-ocp build123d ipykernel ocp_tessellate ocp_vscode"$\r$\n'
                 ${Else}
-                    FileWrite $R1 'cmd.exe /k "pip install cadquery-ocp build123d ipykernel ocp_tessellate ocp_vscode"$\r$\n'
+                    FileWrite $R1 'cmd.exe /k "pip install uv"$\r$\n'
+                    FileWrite $R1 'cmd.exe /k "uv pip install cadquery-ocp build123d ipykernel ocp_tessellate ocp_vscode"$\r$\n'
                 ${EndIf}
             FileClose $R1
             Pop $R1
